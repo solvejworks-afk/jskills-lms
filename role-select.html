@@ -1,1 +1,186 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSKILLS Academy - Select Portal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0B1F5B,#1E3A8A);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:1100px;
+    text-align:center;
+}
+
+.logo{
+    margin-bottom:20px;
+}
+
+.logo img{
+    width:160px;
+}
+
+.logo h2{
+    color:white;
+    margin-top:10px;
+}
+
+.logo p{
+    color:#dbeafe;
+}
+
+.title{
+    color:white;
+    margin-bottom:40px;
+}
+
+.title h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.title p{
+    color:#cbd5e1;
+}
+
+.portal-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.portal-card{
+    background:white;
+    border-radius:25px;
+    padding:40px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+    transition:0.3s;
+    text-decoration:none;
+}
+
+.portal-card:hover{
+    transform:translateY(-8px);
+}
+
+.icon{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.teacher{
+    border-top:8px solid #F59E0B;
+}
+
+.student{
+    border-top:8px solid #10B981;
+}
+
+.portal-card h2{
+    color:#0B1F5B;
+    margin-bottom:15px;
+}
+
+.portal-card p{
+    color:#64748b;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    background:#0B1F5B;
+    color:white;
+    padding:12px 25px;
+    border-radius:10px;
+    font-weight:600;
+}
+
+.footer{
+    margin-top:40px;
+    color:#cbd5e1;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="logo">
+<img src="assets/logo.png" alt="JSKILLS Logo">
+<h2>JSKILLS Academy</h2>
+<p>Empower • Educate • Innovate</p>
+</div>
+
+<div class="title">
+<h1>Select Your Portal</h1>
+<p>Choose how you want to access the learning platform</p>
+</div>
+
+<div class="portal-grid">
+
+<a href="teacher-login.html" class="portal-card teacher">
+
+<div class="icon">👨‍🏫</div>
+
+<h2>Teacher Portal</h2>
+
+<p>
+Manage classes, students, assessments,
+question banks, reports, and course content.
+</p>
+
+<div class="btn">
+Login as Teacher
+</div>
+
+</a>
+
+<a href="student-login.html" class="portal-card student">
+
+<div class="icon">👨‍🎓</div>
+
+<h2>Student Portal</h2>
+
+<p>
+Access courses, videos, simulations,
+assignments, quizzes, and track progress.
+</p>
+
+<div class="btn">
+Login as Student
+</div>
+
+</a>
+
+</div>
+
+<div class="footer">
+© 2026 JSKILLS Academy. All Rights Reserved.
+</div>
+
+</div>
+
+</body>
+</html>
