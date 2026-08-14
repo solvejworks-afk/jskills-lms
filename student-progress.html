@@ -1,1 +1,476 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSKILLS - Learning Progress</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f7fb;
+display:flex;
+}
+
+.sidebar{
+width:260px;
+background:#0B1F5B;
+height:100vh;
+position:fixed;
+padding:25px;
+color:white;
+overflow:auto;
+}
+
+.logo{
+text-align:center;
+margin-bottom:30px;
+}
+
+.logo img{
+width:130px;
+}
+
+.menu a{
+display:block;
+padding:14px;
+margin-bottom:8px;
+color:white;
+text-decoration:none;
+border-radius:10px;
+}
+
+.menu a:hover,
+.menu a.active{
+background:#10B981;
+}
+
+.main{
+margin-left:260px;
+width:100%;
+padding:30px;
+}
+
+.header{
+background:linear-gradient(135deg,#0B1F5B,#163EA8);
+color:white;
+padding:30px;
+border-radius:20px;
+margin-bottom:25px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-bottom:25px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:18px;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.card h4{
+color:#64748b;
+margin-bottom:10px;
+}
+
+.metric{
+font-size:32px;
+font-weight:700;
+color:#0B1F5B;
+}
+
+.section{
+background:white;
+padding:20px;
+border-radius:18px;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+margin-bottom:25px;
+}
+
+.section h2{
+color:#0B1F5B;
+margin-bottom:20px;
+}
+
+.timeline{
+position:relative;
+padding-left:30px;
+}
+
+.timeline::before{
+content:'';
+position:absolute;
+left:8px;
+top:0;
+bottom:0;
+width:4px;
+background:#10B981;
+}
+
+.timeline-item{
+position:relative;
+margin-bottom:25px;
+}
+
+.timeline-item::before{
+content:'';
+position:absolute;
+left:-28px;
+top:4px;
+width:18px;
+height:18px;
+border-radius:50%;
+background:#10B981;
+}
+
+.timeline-item h4{
+color:#0B1F5B;
+}
+
+.progress{
+height:12px;
+background:#e5e7eb;
+border-radius:20px;
+overflow:hidden;
+margin-top:10px;
+}
+
+.progress span{
+display:block;
+height:100%;
+background:#10B981;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+background:#eef2ff;
+padding:12px;
+text-align:left;
+}
+
+td{
+padding:12px;
+border-bottom:1px solid #eee;
+}
+
+.badge{
+display:inline-block;
+padding:6px 12px;
+border-radius:20px;
+font-size:12px;
+font-weight:600;
+}
+
+.gold{
+background:#FEF3C7;
+color:#B45309;
+}
+
+.green{
+background:#DCFCE7;
+color:#15803D;
+}
+
+.blue{
+background:#DBEAFE;
+color:#1D4ED8;
+}
+
+.chart{
+display:flex;
+align-items:flex-end;
+gap:15px;
+height:220px;
+margin-top:20px;
+}
+
+.bar{
+flex:1;
+background:#0B1F5B;
+border-radius:8px 8px 0 0;
+position:relative;
+}
+
+.bar span{
+position:absolute;
+bottom:-25px;
+left:50%;
+transform:translateX(-50%);
+font-size:12px;
+}
+
+@media(max-width:900px){
+
+.sidebar{
+display:none;
+}
+
+.main{
+margin-left:0;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+<img src="assets/logo.png">
+</div>
+
+<div class="menu">
+<a href="student-dashboard.html">Dashboard</a>
+<a href="student-course.html">My Courses</a>
+<a href="#" class="active">Progress</a>
+<a href="#">Certificates</a>
+<a href="#">Assignments</a>
+<a href="index.html">Logout</a>
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="header">
+
+<h1>My Learning Progress 📈</h1>
+
+<p>
+Track your learning journey, quiz performance,
+achievements and course completion status.
+</p>
+
+</div>
+
+<div class="stats">
+
+<div class="card">
+<h4>Courses Enrolled</h4>
+<div class="metric">8</div>
+</div>
+
+<div class="card">
+<h4>Completed Courses</h4>
+<div class="metric">5</div>
+</div>
+
+<div class="card">
+<h4>Certificates Earned</h4>
+<div class="metric">3</div>
+</div>
+
+<div class="card">
+<h4>Average Score</h4>
+<div class="metric">88%</div>
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>Learning Journey</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h4>Physics Fundamentals Completed</h4>
+<p>Video lessons, simulations and quizzes finished.</p>
+</div>
+
+<div class="timeline-item">
+<h4>LabXchange Virtual Lab Completed</h4>
+<p>Successfully completed practical lab activity.</p>
+</div>
+
+<div class="timeline-item">
+<h4>AI Fundamentals Certification Earned</h4>
+<p>Certificate awarded after passing final assessment.</p>
+</div>
+
+<div class="timeline-item">
+<h4>Robotics Course Started</h4>
+<p>Current active learning module.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>Course Progress</h2>
+
+<p><strong>Physics Fundamentals</strong></p>
+<div class="progress">
+<span style="width:100%"></span>
+</div>
+
+<br>
+
+<p><strong>Artificial Intelligence</strong></p>
+<div class="progress">
+<span style="width:90%"></span>
+</div>
+
+<br>
+
+<p><strong>Robotics</strong></p>
+<div class="progress">
+<span style="width:60%"></span>
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>Quiz Performance</h2>
+
+<table>
+
+<tr>
+<th>Quiz</th>
+<th>Course</th>
+<th>Score</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>Physics Quiz 1</td>
+<td>Physics</td>
+<td>92%</td>
+<td><span class="badge green">Passed</span></td>
+</tr>
+
+<tr>
+<td>AI Assessment</td>
+<td>Artificial Intelligence</td>
+<td>88%</td>
+<td><span class="badge green">Passed</span></td>
+</tr>
+
+<tr>
+<td>Robotics Quiz</td>
+<td>Robotics</td>
+<td>76%</td>
+<td><span class="badge blue">In Progress</span></td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="section">
+
+<h2>Weekly Learning Activity</h2>
+
+<div class="chart">
+
+<div class="bar" style="height:120px;">
+<span>Mon</span>
+</div>
+
+<div class="bar" style="height:160px;">
+<span>Tue</span>
+</div>
+
+<div class="bar" style="height:190px;">
+<span>Wed</span>
+</div>
+
+<div class="bar" style="height:140px;">
+<span>Thu</span>
+</div>
+
+<div class="bar" style="height:220px;">
+<span>Fri</span>
+</div>
+
+<div class="bar" style="height:170px;">
+<span>Sat</span>
+</div>
+
+<div class="bar" style="height:90px;">
+<span>Sun</span>
+</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>Achievements & Badges 🏆</h2>
+
+<br>
+
+<span class="badge gold">⭐ Top Performer</span>
+
+<span class="badge green">🎓 Course Finisher</span>
+
+<span class="badge blue">🧪 Lab Explorer</span>
+
+<span class="badge gold">🤖 AI Enthusiast</span>
+
+</div>
+
+<div class="section">
+
+<h2>Certificates Earned</h2>
+
+<table>
+
+<tr>
+<th>Certificate</th>
+<th>Date Earned</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>Physics Fundamentals</td>
+<td>10 Aug 2026</td>
+<td><span class="badge green">Issued</span></td>
+</tr>
+
+<tr>
+<td>AI Fundamentals</td>
+<td>22 Jul 2026</td>
+<td><span class="badge green">Issued</span></td>
+</tr>
+
+<tr>
+<td>Digital Literacy</td>
+<td>05 Jun 2026</td>
+<td><span class="badge green">Issued</span></td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+</body>
+</html>
