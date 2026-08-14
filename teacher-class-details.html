@@ -1,1 +1,466 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSKILLS - Class Management</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f7fb;
+display:flex;
+}
+
+.sidebar{
+width:260px;
+background:#0B1F5B;
+height:100vh;
+position:fixed;
+padding:25px;
+color:white;
+overflow:auto;
+}
+
+.logo{
+text-align:center;
+margin-bottom:25px;
+}
+
+.logo img{
+width:130px;
+}
+
+.menu a{
+display:block;
+padding:14px;
+color:white;
+text-decoration:none;
+border-radius:10px;
+margin-bottom:8px;
+}
+
+.menu a:hover,
+.menu a.active{
+background:#F59E0B;
+}
+
+.main{
+margin-left:260px;
+padding:30px;
+width:100%;
+}
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+}
+
+.header h1{
+color:#0B1F5B;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:18px;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+margin-bottom:20px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.stat{
+background:white;
+padding:20px;
+border-radius:18px;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.stat h4{
+color:#64748b;
+}
+
+.stat h2{
+color:#0B1F5B;
+margin-top:10px;
+}
+
+.tabs{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:20px;
+}
+
+.tab{
+padding:12px 18px;
+background:white;
+border-radius:10px;
+cursor:pointer;
+font-weight:600;
+}
+
+.tab.active{
+background:#F59E0B;
+color:white;
+}
+
+.content-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.resource-card{
+background:white;
+padding:20px;
+border-radius:18px;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.resource-card h3{
+color:#0B1F5B;
+margin-bottom:10px;
+}
+
+.btn{
+border:none;
+padding:10px 15px;
+border-radius:8px;
+cursor:pointer;
+font-weight:600;
+}
+
+.primary{
+background:#0B1F5B;
+color:white;
+}
+
+.success{
+background:#10B981;
+color:white;
+}
+
+.warning{
+background:#F59E0B;
+color:white;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:15px;
+}
+
+th{
+background:#eef2ff;
+padding:12px;
+text-align:left;
+}
+
+td{
+padding:12px;
+border-bottom:1px solid #eee;
+}
+
+.progress{
+height:10px;
+background:#e5e7eb;
+border-radius:20px;
+overflow:hidden;
+}
+
+.progress span{
+display:block;
+height:100%;
+background:#10B981;
+width:78%;
+}
+
+.badge{
+background:#dcfce7;
+color:#15803d;
+padding:5px 10px;
+border-radius:20px;
+font-size:12px;
+}
+
+.question{
+padding:15px;
+background:#f8fafc;
+border-radius:10px;
+margin-top:10px;
+}
+
+.option{
+margin-top:8px;
+}
+
+textarea{
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:10px;
+margin-top:10px;
+}
+
+input{
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:10px;
+margin-top:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+<img src="assets/logo.png">
+</div>
+
+<div class="menu">
+<a href="teacher-dashboard.html">Dashboard</a>
+<a href="teacher-classes.html" class="active">Classes</a>
+<a href="#">Students</a>
+<a href="#">Question Bank</a>
+<a href="#">Reports</a>
+<a href="#">Logout</a>
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="header">
+<h1>Physics Grade 9 - Class Details</h1>
+<button class="btn success">+ Add Content</button>
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<h4>Students Enrolled</h4>
+<h2>42</h2>
+</div>
+
+<div class="stat">
+<h4>Completion Rate</h4>
+<h2>78%</h2>
+</div>
+
+<div class="stat">
+<h4>Quiz Average</h4>
+<h2>82%</h2>
+</div>
+
+<div class="stat">
+<h4>Assignments</h4>
+<h2>14</h2>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="tabs">
+<div class="tab active">Overview</div>
+<div class="tab">Content</div>
+<div class="tab">Q&A</div>
+<div class="tab">Analytics</div>
+</div>
+
+<h3>Class Progress</h3>
+
+<div class="progress">
+<span></span>
+</div>
+
+<p style="margin-top:10px;">78% Course Completion</p>
+
+</div>
+
+<div class="content-grid">
+
+<div class="resource-card">
+
+<h3>🎥 YouTube Lesson</h3>
+
+<p>Motion and Forces Introduction</p>
+
+<iframe width="100%" height="200"
+src="https://www.youtube.com/embed/ZM8ECpBuQYE"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<div class="resource-card">
+
+<h3>🧪 PhET Simulation</h3>
+
+<p>Interactive Physics Simulation</p>
+
+<br>
+
+<a href="https://phet.colorado.edu/"
+target="_blank">
+
+<button class="btn primary">
+Launch Simulation
+</button>
+
+</a>
+
+</div>
+
+<div class="resource-card">
+
+<h3>🔬 LabXchange Activity</h3>
+
+<p>Virtual Lab Activity</p>
+
+<br>
+
+<a href="https://www.labxchange.org/"
+target="_blank">
+
+<button class="btn primary">
+Open Lab
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Study Materials</h2>
+
+<table>
+
+<tr>
+<th>Resource</th>
+<th>Type</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>Motion Notes.pdf</td>
+<td>PDF</td>
+<td><span class="badge">Published</span></td>
+</tr>
+
+<tr>
+<td>Forces Worksheet</td>
+<td>Assignment</td>
+<td><span class="badge">Published</span></td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Q&A Builder</h2>
+
+<input placeholder="Question Title">
+
+<div class="question">
+
+<label>Question Type</label>
+
+<select style="width:100%;padding:12px;margin-top:10px;border-radius:10px;">
+<option>Single Choice</option>
+<option>Multiple Choice</option>
+</select>
+
+<input placeholder="Option A">
+<input placeholder="Option B">
+<input placeholder="Option C">
+<input placeholder="Option D">
+
+<textarea rows="3"
+placeholder="Explanation / Correct Answer">
+</textarea>
+
+<br><br>
+
+<button class="btn success">
+Save Question
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Student Progress</h2>
+
+<table>
+
+<tr>
+<th>Student</th>
+<th>Video</th>
+<th>Simulation</th>
+<th>Quiz</th>
+<th>Progress</th>
+</tr>
+
+<tr>
+<td>John Smith</td>
+<td>Completed</td>
+<td>Completed</td>
+<td>8/10</td>
+<td>85%</td>
+</tr>
+
+<tr>
+<td>Sarah Lee</td>
+<td>Completed</td>
+<td>In Progress</td>
+<td>-</td>
+<td>62%</td>
+</tr>
+
+<tr>
+<td>David Kumar</td>
+<td>Not Started</td>
+<td>-</td>
+<td>-</td>
+<td>10%</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+</body>
+</html>
